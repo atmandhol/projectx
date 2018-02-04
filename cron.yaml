@@ -1,0 +1,5 @@
+cron:
+- description: "ping to scheduler"
+  url: /ping
+  schedule: every 1 minutes
+  target: scheduler
