@@ -4,20 +4,8 @@ service: projectx
 threadsafe: true
 
 handlers:
-- url: /ui/dashboard
-  static_files: ui/dashboard.html
-  upload: ui/dashboard.html
-  http_headers:
-    Cache-Control: no-cache, no-store, must-revalidate
-    Pragma: no-cache
-    Expires: 0
-
-- url: /ui
-  static_dir: ui/
-  http_headers:
-    Cache-Control: no-cache, no-store, must-revalidate
-    Pragma: no-cache
-    Expires: 0
+- url: /assets
+  static_dir: ui/assets
 
 - url: /ping
   script: starter.scheduler
@@ -25,3 +13,5 @@ handlers:
   script: starter.worker
 - url: /manager/.*
   script: starter.taskmanager
+- url: /dashboard
+  script: starter.uirouter
