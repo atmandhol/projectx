@@ -8,3 +8,8 @@ app.wsgi_app = ProxyFix(app.wsgi_app)
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
     return open("ui/dashboard.html").read()
+
+
+@app.route('/create', methods=['GET'])
+def create_task():
+    return open("ui/taskdefinition.html").read()

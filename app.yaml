@@ -15,3 +15,5 @@ handlers:
   script: starter.taskmanager
 - url: /dashboard
   script: starter.uirouter
+- url: /create
+  script: starter.uirouter
